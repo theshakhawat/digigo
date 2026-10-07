@@ -321,6 +321,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     margin: 16
                 }
             }
+        });
+
         /* =========================================================================
            8. Featured Brands (Owl Carousel: 6 on PC, 3 on Mobile, 3s Autoplay)
            ========================================================================= */
@@ -352,5 +354,120 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+
+        /* =========================================================================
+           9. New Arrival Products (Owl Carousel 2: 4 on Desktop for larger cards)
+           ========================================================================= */
+        $('#newArrivalCarousel').owlCarousel({
+            loop: false,
+            margin: 18,
+            nav: false,
+            dots: true,
+            autoplay: false,
+            smartSpeed: 450,
+            responsive: {
+                0: {
+                    items: 2,
+                    margin: 10
+                },
+                576: {
+                    items: 2,
+                    margin: 12
+                },
+                768: {
+                    items: 3,
+                    margin: 14
+                },
+                1024: {
+                    items: 4,
+                    margin: 16
+                },
+                1280: {
+                    items: 4,
+                    margin: 18
+                }
+            }
+        });
+
+        /* =========================================================================
+           10. Most Sold Products (Owl Carousel 2 Initialization)
+           ========================================================================= */
+        $('#mostSoldCarousel').owlCarousel({
+            loop: false,
+            margin: 16,
+            nav: false,
+            dots: true,
+            autoplay: false,
+            smartSpeed: 450,
+            responsive: {
+                0: {
+                    items: 2,
+                    margin: 10
+                },
+                576: {
+                    items: 3,
+                    margin: 12
+                },
+                768: {
+                    items: 4,
+                    margin: 14
+                },
+                1024: {
+                    items: 5,
+                    margin: 16
+                },
+                1280: {
+                    items: 6,
+                    margin: 16
+                }
+            }
+        });
+
+        /* =========================================================================
+           11. Digital Deals Carousel (Owl Carousel 2 Initialization)
+           ========================================================================= */
+        $('#digitalDealsCarousel').owlCarousel({
+            loop: false,
+            margin: 14,
+            nav: false,
+            dots: true,
+            autoplay: false,
+            smartSpeed: 450,
+            responsive: {
+                0: {
+                    items: 1.4,
+                    margin: 10
+                },
+                480: {
+                    items: 2,
+                    margin: 12
+                },
+                768: {
+                    items: 2.2,
+                    margin: 12
+                },
+                1024: {
+                    items: 3,
+                    margin: 14
+                }
+            }
+        });
+
+        if ($('#digitalGoodsCarousel.owl-carousel').length) {
+            $('#digitalGoodsCarousel').owlCarousel({
+                loop: false,
+                margin: 16,
+                nav: false,
+                dots: true,
+                autoplay: false,
+                smartSpeed: 450,
+                responsive: {
+                    0: { items: 2, margin: 10 },
+                    576: { items: 3, margin: 12 },
+                    768: { items: 4, margin: 14 },
+                    1024: { items: 5, margin: 16 }
+                }
+            });
+        }
     }
 });

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <!-- SEO Meta Tags -->
     <title>DigiGo - Digital Products, Software & Subscription Services</title>
     <meta name="description" content="DigiGo is your trusted digital store for AI tools, Gift Cards, Cloud Storage, Streaming Subscriptions, Operating Systems, and software solutions.">
@@ -18,10 +18,13 @@
     <meta property="og:title" content="DigiGo - Digital Products & Software Store">
     <meta property="og:description" content="Best deals on AI tools, Software Subscriptions, and Digital Services.">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts (Hind Siliguri for Bengali + Plus Jakarta Sans for UI) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6.5.1 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Owl Carousel 2 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -37,10 +40,11 @@
          ========================================================================= -->
     <header class="site-header">
         <!-- Top Header Bar -->
+        <!-- Top Header Bar -->
         <div class="top-header">
             <div class="container top-header-inner">
-                
-                <!-- Left: Sidebar Toggle & Brand Logo -->
+
+                <!-- Left: Sidebar Toggle Button -->
                 <div class="header-left-group">
                     <button type="button" class="sidebar-toggle-btn js-sidebar-toggle" aria-label="Toggle Navigation Menu">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -49,15 +53,18 @@
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                     </button>
+                </div>
 
+                <!-- Center: Brand Logo (Desktop & Mobile Centered) -->
+                <div class="header-logo-group">
                     <a href="{{ url('/') }}" class="brand-logo" aria-label="DigiGo Homepage">
                         <div class="logo-icon">d</div>
                         <span class="brand-text">digigo<span class="text-primary">.com.bd</span></span>
                     </a>
                 </div>
 
-                <!-- Center: Desktop Search Bar -->
-                <div class="header-search-box desktop-search-box">
+                <!-- Desktop Search Bar -->
+                <div class="header-search-box desktop-search-box desktop-only">
                     <form action="#" method="GET" class="search-form" role="search">
                         <input type="text" name="q" class="search-input" placeholder="Search for products..." aria-label="Search products">
                         <button type="submit" class="search-submit-btn" aria-label="Submit Search">
@@ -69,9 +76,9 @@
                     </form>
                 </div>
 
-                <!-- Right: Desktop Contact Information & Mobile Search Icon -->
+                <!-- Right: Desktop Contact Numbers & Mobile Search Button -->
                 <div class="header-right-group">
-                    <div class="header-contact-info">
+                    <div class="header-contact-info desktop-only">
                         <div class="contact-item">
                             <span class="contact-label">24 Support</span>
                             <a href="tel:+8809611678088" class="contact-value">+8809611678088</a>
@@ -82,9 +89,9 @@
                         </div>
                     </div>
 
-                    <!-- Mobile Search Trigger Button (As seen in Mobile Screenshot 1 & 4) -->
+                    <!-- Mobile Search Trigger Button (Circular Magenta/Purple Button matching Bongo Digital) -->
                     <button type="button" class="mobile-search-trigger js-search-modal-open" aria-label="Open Search">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
@@ -97,7 +104,7 @@
         <!-- Sub Header Bar (Desktop Blue Ribbon) -->
         <div class="sub-header-bar desktop-only">
             <div class="container sub-header-inner">
-                
+
                 <!-- Left: Menu Pill Toggle -->
                 <button type="button" class="menu-pill-btn js-sidebar-toggle" aria-label="Open Categories Menu">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -404,79 +411,30 @@
          Main Layout: Mini Icon Rail (Desktop) + Content Area (Mobile & Desktop)
          ========================================================================= -->
     <div class="layout-container">
-        <!-- Left Mini Icon Rail (Desktop Only) -->
-        <aside class="sidebar-icon-rail desktop-only" aria-label="Quick Category Access">
-            <a href="#ai" class="rail-item" title="Artificial intelligence (AI)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
-                </svg>
-                <span class="rail-tooltip">AI Tools</span>
-            </a>
-            <a href="#games-gift-cards" class="rail-item" title="Game & Gift Card">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-                    <line x1="6" y1="12" x2="10" y2="12"></line>
-                    <line x1="8" y1="10" x2="8" y2="14"></line>
-                </svg>
-                <span class="rail-tooltip">Games & Cards</span>
-            </a>
-            <a href="#cloud-storage" class="rail-item" title="Cloud Storage">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
-                </svg>
-                <span class="rail-tooltip">Cloud Storage</span>
-            </a>
-            <a href="#entertainment-streaming" class="rail-item" title="Entertainment & Streaming">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="4" width="20" height="15" rx="2"></rect>
-                    <polygon points="10 8 16 11.5 10 15 10 8"></polygon>
-                </svg>
-                <span class="rail-tooltip">Streaming</span>
-            </a>
-            <a href="#mobile-apps" class="rail-item" title="Mobile Apps">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                </svg>
-                <span class="rail-tooltip">Mobile Apps</span>
-            </a>
-            <a href="#office-productivity" class="rail-item" title="Office & Productivity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
-                <span class="rail-tooltip">Office & Work</span>
-            </a>
-            <a href="#operating-systems" class="rail-item" title="Operating Systems">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                </svg>
-                <span class="rail-tooltip">OS & Keys</span>
-            </a>
-        </aside>
+
 
         <!-- Main Content Area with Banner Slider & Mobile Features -->
         <main class="main-content">
             <div class="banner-wrapper">
-                
-                <!-- Hero Banner Carousel (Mobile & Desktop) -->
+
+                <!-- Hero Banner Carousel (Mobile & Desktop - Matching Bongo Digital) -->
                 <section class="hero-carousel" id="heroCarousel" aria-label="Featured Promotions">
                     <div class="carousel-track">
-                        
-                        <!-- Slide 1: Ultra-compact lightning-fast charging / Gadgets -->
+
+                        <!-- Slide 1: Elevate your audio experience -->
                         <div class="carousel-slide active">
-                            <div class="banner-card slide-bg-1">
-                                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1600&q=80" alt="Ultra-compact 20W Fast Charging" class="banner-cover-img" loading="eager">
-                                <div class="banner-overlay-gradient"></div>
+                            <div class="banner-card">
+                                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1600&q=80" alt="Audio Experience" class="banner-cover-img" loading="eager">
                                 <div class="banner-content">
                                     <h1 class="banner-title">
-                                        Ultra-compact<br>
-                                        lightning-fast 20W<br>
-                                        3x Faster Charging <span class="highlight-symbol">⚡</span>
+                                        Elevate your audio <span class="highlight-symbol">🎧</span><br>
+                                        experience
                                     </h1>
+                                    <p class="banner-description">
+                                        Immerse yourself in crystal clear sound with our premium wireless headphones and high-fidelity earbuds at best prices.
+                                    </p>
                                     <div class="banner-action">
-                                        <a href="#shop" class="btn-shop-now">SHOP NOW</a>
+                                        <a href="#audio-sound" class="btn-shop-now">SHOP NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -484,16 +442,16 @@
 
                         <!-- Slide 2: Premium AI Tools & Software Keys -->
                         <div class="carousel-slide">
-                            <div class="banner-card slide-bg-2">
+                            <div class="banner-card">
                                 <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80" alt="Premium AI Tools & Software Keys" class="banner-cover-img" loading="lazy">
-                                <div class="banner-overlay-gradient"></div>
                                 <div class="banner-content">
-                                    <span class="banner-badge">TOP RATED</span>
                                     <h2 class="banner-title">
-                                        Premium AI Tools<br>
-                                        & Software Keys<br>
-                                        At Best Prices <span class="highlight-symbol">🚀</span>
+                                        Premium AI Tools <span class="highlight-symbol">🚀</span><br>
+                                        & Software Keys
                                     </h2>
+                                    <p class="banner-description">
+                                        Supercharge your workflow with genuine licenses for top AI tools, creative software, and productivity suites with instant delivery.
+                                    </p>
                                     <div class="banner-action">
                                         <a href="#ai-tools" class="btn-shop-now">EXPLORE DEALS</a>
                                     </div>
@@ -501,20 +459,39 @@
                             </div>
                         </div>
 
-                        <!-- Slide 3: Smart Devices & Audio Gadgets -->
+                        <!-- Slide 3: Smart Watches & Accessories -->
                         <div class="carousel-slide">
-                            <div class="banner-card slide-bg-3">
-                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1600&q=80" alt="Smart Devices & Audio Gadgets" class="banner-cover-img" loading="lazy">
-                                <div class="banner-overlay-gradient"></div>
+                            <div class="banner-card">
+                                <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1600&q=80" alt="Smart Wearable Tech" class="banner-cover-img" loading="lazy">
                                 <div class="banner-content">
-                                    <span class="banner-badge">BEST SELLER</span>
                                     <h2 class="banner-title">
-                                        Smart Audio &<br>
-                                        Wearable Tech<br>
-                                        Exclusive Deals <span class="highlight-symbol">🎧</span>
+                                        Smart Devices <span class="highlight-symbol">⌚</span><br>
+                                        & Wearable Tech
                                     </h2>
+                                    <p class="banner-description">
+                                        Discover the latest smartwatches, fitness trackers, and modern smart accessories engineered for your everyday lifestyle.
+                                    </p>
                                     <div class="banner-action">
-                                        <a href="#audio-gadgets" class="btn-shop-now">ORDER NOW</a>
+                                        <a href="#smartwatches" class="btn-shop-now">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Ultra Fast Charging & Power Solutions -->
+                        <div class="carousel-slide">
+                            <div class="banner-card">
+                                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1600&q=80" alt="Fast Charging Solutions" class="banner-cover-img" loading="lazy">
+                                <div class="banner-content">
+                                    <h2 class="banner-title">
+                                        Fast Charging <span class="highlight-symbol">⚡</span><br>
+                                        & Power Solutions
+                                    </h2>
+                                    <p class="banner-description">
+                                        Ultra-compact, lightning-fast 20W to 100W GaN chargers and power banks built to keep all your gadgets charged anywhere.
+                                    </p>
+                                    <div class="banner-action">
+                                        <a href="#power-charging" class="btn-shop-now">SHOP NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -522,11 +499,12 @@
 
                     </div>
 
-                    <!-- Carousel Pagination Dots (Middle bottom, slightly raised) -->
-                    <div class="carousel-pagination" id="carouselDots" role="tablist" aria-label="Banner pagination">
+                    <!-- Carousel Pagination Dots (Capsule Pill matching Bongo Digital) -->
+                    <div class="carousel-pagination banner-dots-pill" id="carouselDots" role="tablist" aria-label="Banner pagination">
                         <button class="dot-btn active" role="tab" aria-label="Slide 1" aria-selected="true" data-slide="0"></button>
                         <button class="dot-btn" role="tab" aria-label="Slide 2" aria-selected="false" data-slide="1"></button>
                         <button class="dot-btn" role="tab" aria-label="Slide 3" aria-selected="false" data-slide="2"></button>
+                        <button class="dot-btn" role="tab" aria-label="Slide 4" aria-selected="false" data-slide="3"></button>
                     </div>
 
                     <!-- Desktop Nav Arrows -->
@@ -548,6 +526,15 @@
                             <div class="trust-feature-item">
                                 <span class="trust-icon-box">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="trust-text">Authentic & Genuine Product.</span>
+                            </div>
+                            <div class="trust-feature-item">
+                                <span class="trust-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
                                         <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
                                     </svg>
@@ -562,15 +549,6 @@
                                     </svg>
                                 </span>
                                 <span class="trust-text">Low Prices Than in Other Stores</span>
-                            </div>
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                        <polyline points="9 12 11 14 15 10"></polyline>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">Authentic & Genuine Product.</span>
                             </div>
                             <div class="trust-feature-item">
                                 <span class="trust-icon-box">
@@ -588,6 +566,15 @@
                             <div class="trust-feature-item">
                                 <span class="trust-icon-box">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="trust-text">Authentic & Genuine Product.</span>
+                            </div>
+                            <div class="trust-feature-item">
+                                <span class="trust-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
                                         <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
                                     </svg>
@@ -602,15 +589,6 @@
                                     </svg>
                                 </span>
                                 <span class="trust-text">Low Prices Than in Other Stores</span>
-                            </div>
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                        <polyline points="9 12 11 14 15 10"></polyline>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">Authentic & Genuine Product.</span>
                             </div>
                             <div class="trust-feature-item">
                                 <span class="trust-icon-box">
@@ -649,7 +627,7 @@
                         <!-- 3. Power & Charging Solutions -->
                         <a href="#power-charging" class="circle-item">
                             <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1609592424359-57774e470876?auto=format&fit=crop&w=200&h=200&q=80" alt="Power & Charging Solutions" class="circle-category-img" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=200&h=200&q=80" alt="Power & Charging Solutions" class="circle-category-img" loading="lazy">
                             </div>
                             <span class="circle-item-name">Power &<br>Charging<br>Solutions</span>
                         </a>
@@ -881,7 +859,7 @@
                      ========================================================================= -->
                 <section class="brands-carousel-section" aria-label="Featured Brands">
                     <div class="owl-carousel owl-theme brands-carousel" id="brandsCarousel">
-                        
+
                         <!-- Brand 1: UGREEN -->
                         <div class="item">
                             <a href="#brand-ugreen" class="brand-item-card" title="UGREEN">
@@ -988,6 +966,1247 @@
                     </div>
                 </section>
 
+                <!-- =========================================================================
+                     New Arrival Products Section (Owl Carousel - Matching Screenshot)
+                     ========================================================================= -->
+                <section class="new-arrival-section" aria-label="New Arrival Products">
+                    <div class="section-header-flex">
+                        <div class="section-title-wrap">
+                            <h2 class="section-heading">
+                                <span class="title-sparkle-icon">✨</span> New Arrival
+                            </h2>
+                        </div>
+                        <a href="#all-products" class="view-all-link">All Products</a>
+                    </div>
+
+                    <div class="owl-carousel owl-theme product-grid-carousel" id="newArrivalCarousel">
+                        <!-- Product 1: TP-Link Archer -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=400&q=80" alt="TP-Link Archer" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">TP-Link Archer</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.7</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(3)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Networking & Security</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">3,590.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2: BD-PON Mini -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <span class="discount-badge">-15%</span>
+                                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=400&q=80" alt="BD-PON Mini" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">BD-PON Mini</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.6</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(5)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Gadget & Power Solutions</a>
+                                    <div class="arrival-price-wrap">
+                                        <del class="arrival-old-price">2,000.00৳</del>
+                                        <span class="arrival-price">1,699.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3: Ulanzi VIJIM- -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=400&q=80" alt="Ulanzi VIJIM" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">Ulanzi VIJIM-</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.3</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(4)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Studio & Lighting Gear</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">2,500.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4: Sony WF- -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=400&q=80" alt="Sony WF" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">Sony WF-</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.3</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(6)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Audio & Sound</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">11,899.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 5: BYZ S623 -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=400&q=80" alt="BYZ S623" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">BYZ S623</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.4</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(5)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Audio & Sound</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">1,250.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 6: Magnetic Mobile Holder -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=400&q=80" alt="Magnetic Holder" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">Magnetic</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.8</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(11)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Mobile Accessories</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">699.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 7: Anker 511 Nano Pro -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=400&q=80" alt="Anker 511" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">Anker 511</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.9</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(9)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Charging & Power</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">1,399.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- =========================================================================
+                     Tri-Banner Promo Grid (Feature Promo Cards - Smartwatch, Earbuds, Mic)
+                     ========================================================================= -->
+                <section class="tri-promo-section" aria-label="Featured Product Highlights">
+                    <div class="tri-promo-grid">
+                        <!-- Card 1: Next level adventure (Smartwatch) -->
+                        <div class="tri-promo-card card-light">
+                            <div class="tri-promo-img-wrap">
+                                <img src="{{ asset('assets/images/promos/promo_smartwatch.png') }}" alt="Next level adventure - Smartwatch" class="tri-promo-img" loading="lazy">
+                            </div>
+                            <div class="tri-promo-body">
+                                <h3 class="tri-promo-title">Next level adventure</h3>
+                                <p class="tri-promo-desc">
+                                    Elevate your adventure through the perfect fusion of military-grade toughness and striking silver aesthetics.
+                                </p>
+                                <a href="#smartwatch-deals" class="btn-tri-shop">Shop Now</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Dare To Leap (Earbuds - Dark Theme) -->
+                        <div class="tri-promo-card card-dark">
+                            <div class="tri-promo-img-wrap">
+                                <img src="{{ asset('assets/images/promos/promo_earbuds.png') }}" alt="Dare To Leap - Dual Tone Earbuds" class="tri-promo-img" loading="lazy">
+                            </div>
+                            <div class="tri-promo-body">
+                                <h3 class="tri-promo-title">Dare To Leap</h3>
+                                <p class="tri-promo-desc">
+                                    Experience the ultimate blend of striking aesthetics and deep audio immersion with its premium dual-tone design.
+                                </p>
+                                <a href="#earbuds-deals" class="btn-tri-shop">Shop Now</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Stream Like A Pro (USB/RGB Mic) -->
+                        <div class="tri-promo-card card-light">
+                            <div class="tri-promo-img-wrap">
+                                <img src="{{ asset('assets/images/promos/promo_mic.png') }}" alt="Stream Like A Pro - Studio Microphone" class="tri-promo-img" loading="lazy">
+                            </div>
+                            <div class="tri-promo-body">
+                                <h3 class="tri-promo-title">Stream Like A Pro</h3>
+                                <p class="tri-promo-desc">
+                                    Level up your stream with real-time game/chat mixing, dual-mic noise cancellation, and dynamic RGB.
+                                </p>
+                                <a href="#streaming-deals" class="btn-tri-shop">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- =========================================================================
+                     Dual Promo Banner Grid (Mounting Stand & Portable Fan)
+                     ========================================================================= -->
+                <section class="dual-promo-section" aria-label="Special Product Offers">
+                    <div class="dual-promo-grid">
+                        <!-- Banner 1: Heavy-Duty Dual Device Mounting -->
+                        <a href="#mounting-offers" class="dual-promo-card banner-mounting">
+                            <div class="dual-promo-content">
+                                <h3 class="dual-promo-title">Heavy-Duty Dual<br>Device Mounting</h3>
+                                <div class="dual-promo-offer-box">
+                                    <span>Get 10% OFF; Promo code:</span>
+                                    <span class="promo-code-pill">ULNJI2026M</span>
+                                </div>
+                                <p class="dual-promo-disclaimer">*Not combined with promotional offers and discounts</p>
+                            </div>
+                            <div class="dual-promo-visual">
+                                <img src="{{ asset('assets/images/promos/visual_mounting.png') }}" alt="Heavy-Duty Dual Device Mounting" class="dual-promo-visual-img" loading="lazy">
+                            </div>
+                        </a>
+
+                        <!-- Banner 2: Stay Cool In Style -->
+                        <a href="#fan-offers" class="dual-promo-card banner-fancool">
+                            <div class="dual-promo-content">
+                                <h3 class="dual-promo-title">Stay Cool In<br>Style</h3>
+                                <p class="dual-promo-desc">
+                                    Stay effortlessly cool with an ultra-compact 40,000 RPM turbo airflow.
+                                </p>
+                            </div>
+                            <div class="dual-promo-visual">
+                                <img src="{{ asset('assets/images/promos/visual_fancool.png') }}" alt="Stay Cool In Style - Turbo Airflow Fan" class="dual-promo-visual-img" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+
+
+
+
+                <!-- =========================================================================
+                     Most Sold Products Section (Owl Carousel - Matching Screenshot)
+                     ========================================================================= -->
+                <section class="most-sold-section" aria-label="Most Sold Products">
+                    <div class="section-header-flex">
+                        <div class="section-title-wrap">
+                            <h2 class="section-heading">
+                                <span class="title-sparkle-icon">🏆</span> Most Sold!
+                            </h2>
+                        </div>
+                        <a href="#all-products" class="view-all-link">All Products</a>
+                    </div>
+
+                    <div class="owl-carousel owl-theme product-grid-carousel" id="mostSoldCarousel">
+                        <!-- Product 1: Remax Watch 9 -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="{{ asset('assets/images/products/sold_remax_watch9.png') }}" alt="Remax Watch 9" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">Remax Watch 9</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.3</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(3)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Smartwatches & Accessories</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">3,299.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2: TP-Link Deco E4 -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="{{ asset('assets/images/products/sold_tplink_deco.png') }}" alt="TP-Link Deco E4" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">TP-Link Deco E4</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.5</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(4)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Gadget & Electronics, Networking & Security</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">2,950.00৳ - 8,550.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3: BYZ S623 -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="{{ asset('assets/images/products/sold_byz_s623.png') }}" alt="BYZ S623" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">BYZ S623</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.4</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(5)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Audio & Sound</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">1,250.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4: 600Mbps Dual -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <span class="discount-badge discount-green">NEW</span>
+                                    <img src="{{ asset('assets/images/products/sold_600mbps_dual.png') }}" alt="600Mbps Dual" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">600Mbps Dual</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">5.0</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(3)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Gadget & Electronics</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">899.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 5: JOYROOM JR-FC2 -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="{{ asset('assets/images/products/sold_joyroom_watch.png') }}" alt="JOYROOM JR-FC2" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">JOYROOM JR-FC2</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.3</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(4)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Smartwatches & Accessories</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">3,550.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 6: MiLi Smart Find -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="{{ asset('assets/images/products/sold_mili_tracker.png') }}" alt="MiLi Smart Find" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">MiLi Smart Find</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.8</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(5)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Gadget & Electronics, Networking & Security</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">799.00৳ - 1,480.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 7: Anker 511 -->
+                        <div class="item">
+                            <div class="arrival-product-card">
+                                <a href="#product-details" class="arrival-thumb-box">
+                                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=400&q=80" alt="Anker 511" class="arrival-product-img" loading="lazy">
+                                    <div class="card-support-badge">
+                                        <span class="badge-brand">d</span>
+                                        <span class="badge-text">24/7 Support</span>
+                                    </div>
+                                </a>
+                                <div class="arrival-product-body">
+                                    <div class="arrival-title-rating">
+                                        <h3 class="arrival-product-title"><a href="#product-details">Anker 511</a></h3>
+                                        <div class="arrival-rating">
+                                            <span class="rating-num">4.9</span>
+                                            <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                            <span class="rating-count">(9)</span>
+                                        </div>
+                                    </div>
+                                    <a href="#category" class="arrival-category-sub">Charging & Power</a>
+                                    <div class="arrival-price-wrap">
+                                        <span class="arrival-price">1,399.00৳</span>
+                                    </div>
+                                    <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- =========================================================================
+                     Digital Items & Software Deals Section (Blue Vibe Showcase)
+                     ========================================================================= -->
+                <section class="digital-deals-section" aria-label="Digital Items & Software Deals">
+                    <div class="digital-deals-card">
+                        <!-- Left Call to Action Column -->
+                        <div class="digital-deals-cta">
+                            <h2 class="digital-deals-title">
+                                Get special deals on digital items
+                            </h2>
+                            <a href="#digital-goods" class="btn-buy-now">Buy Now</a>
+                            <div class="digital-boxes-visual">
+                                <img src="{{ asset('assets/images/digital/software_boxes_transparent.png') }}" alt="Software Packages - Windows 11 Pro, Avast Security, IDM" class="digital-boxes-img" loading="lazy">
+                            </div>
+                        </div>
+
+                        <!-- Right Products Slider Column -->
+                        <div class="digital-products-slider">
+                            <div class="owl-carousel owl-theme digital-deals-carousel" id="digitalDealsCarousel">
+                                <!-- Product 1: Amazon Prime -->
+                                <div class="item">
+                                    <div class="arrival-product-card">
+                                        <a href="#product-details" class="arrival-thumb-box">
+                                            <img src="{{ asset('assets/images/digital/digital_prime.png') }}" alt="Amazon Prime Video" class="arrival-product-img" loading="lazy">
+                                            <div class="card-support-badge">
+                                                <span class="badge-brand">d</span>
+                                                <span class="badge-text">24/7 Support</span>
+                                            </div>
+                                        </a>
+                                        <div class="arrival-product-body">
+                                            <div class="arrival-title-rating">
+                                                <h3 class="arrival-product-title"><a href="#product-details">Amazon Prime</a></h3>
+                                                <div class="arrival-rating">
+                                                    <span class="rating-num">4.6</span>
+                                                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="rating-count">(7)</span>
+                                                </div>
+                                            </div>
+                                            <a href="#category" class="arrival-category-sub">Digital, Entertainment & Streaming, Subscription Services</a>
+                                            <div class="arrival-price-wrap">
+                                                <span class="arrival-price">150.00৳ - 1,560.00৳</span>
+                                            </div>
+                                            <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 2: Microsoft 365 -->
+                                <div class="item">
+                                    <div class="arrival-product-card">
+                                        <a href="#product-details" class="arrival-thumb-box">
+                                            <img src="{{ asset('assets/images/digital/digital_office365.png') }}" alt="Microsoft 365 Personal" class="arrival-product-img" loading="lazy">
+                                            <div class="card-support-badge">
+                                                <span class="badge-brand">d</span>
+                                                <span class="badge-text">24/7 Support</span>
+                                            </div>
+                                        </a>
+                                        <div class="arrival-product-body">
+                                            <div class="arrival-title-rating">
+                                                <h3 class="arrival-product-title"><a href="#product-details">Microsoft 365</a></h3>
+                                                <div class="arrival-rating">
+                                                    <span class="rating-num">4.5</span>
+                                                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="rating-count">(4)</span>
+                                                </div>
+                                            </div>
+                                            <a href="#category" class="arrival-category-sub">Digital, Office & Productivity, Subscription Services</a>
+                                            <div class="arrival-price-wrap">
+                                                <span class="arrival-price">310.00৳ - 2,600.00৳</span>
+                                            </div>
+                                            <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 3: Windows Digital -->
+                                <div class="item">
+                                    <div class="arrival-product-card">
+                                        <a href="#product-details" class="arrival-thumb-box">
+                                            <span class="discount-badge">-94%</span>
+                                            <img src="{{ asset('assets/images/digital/digital_windows.png') }}" alt="Windows Digital License" class="arrival-product-img" loading="lazy">
+                                            <div class="card-support-badge">
+                                                <span class="badge-brand">d</span>
+                                                <span class="badge-text">24/7 Support</span>
+                                            </div>
+                                        </a>
+                                        <div class="arrival-product-body">
+                                            <div class="arrival-title-rating">
+                                                <h3 class="arrival-product-title"><a href="#product-details">Windows Digital</a></h3>
+                                                <div class="arrival-rating">
+                                                    <span class="rating-num">4.7</span>
+                                                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="rating-count">(3)</span>
+                                                </div>
+                                            </div>
+                                            <a href="#category" class="arrival-category-sub">Operating Systems, Perpetual License</a>
+                                            <div class="arrival-price-wrap">
+                                                <span class="arrival-price">780.00৳ - 890.00৳</span>
+                                            </div>
+                                            <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 4: Canva Pro -->
+                                <div class="item">
+                                    <div class="arrival-product-card">
+                                        <a href="#product-details" class="arrival-thumb-box">
+                                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Canva Pro Subscription" class="arrival-product-img" loading="lazy">
+                                            <div class="card-support-badge">
+                                                <span class="badge-brand">d</span>
+                                                <span class="badge-text">24/7 Support</span>
+                                            </div>
+                                        </a>
+                                        <div class="arrival-product-body">
+                                            <div class="arrival-title-rating">
+                                                <h3 class="arrival-product-title"><a href="#product-details">Canva Pro</a></h3>
+                                                <div class="arrival-rating">
+                                                    <span class="rating-num">4.9</span>
+                                                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="rating-count">(18)</span>
+                                                </div>
+                                            </div>
+                                            <a href="#category" class="arrival-category-sub">Digital, Design & Productivity, Subscription</a>
+                                            <div class="arrival-price-wrap">
+                                                <del class="arrival-old-price">1,200.00৳</del>
+                                                <span class="arrival-price">299.00৳</span>
+                                            </div>
+                                            <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- =========================================================================
+                     Explore The World Of Digital Goods Section (Matching Screenshot)
+                     ========================================================================= -->
+                <section class="digital-goods-catalog-section" aria-label="Explore Digital Goods">
+                    <div class="section-header-flex">
+                        <div class="section-title-wrap">
+                            <h2 class="section-heading">
+                                <span class="title-sparkle-icon">💻</span> Explore the world of digital goods
+                            </h2>
+                        </div>
+                        <a href="#all-digital-goods" class="view-all-link">All Products</a>
+                    </div>
+
+                    <div class="digital-goods-grid" id="digitalGoodsGrid">
+                        <!-- Row 1: Product 1 - Claude AI Pro & Max -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="{{ asset('assets/images/digital/prod_claude_ai.png') }}" alt="Claude AI Pro & Max" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Claude AI Pro & Max</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.8</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(5)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Artificial intelligence (AI), Subscription Services</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">3,200.00৳ - 32,000.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 1: Product 2 - Elementor Pro -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="{{ asset('assets/images/digital/prod_elementor_pro.png') }}" alt="Elementor Pro" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Elementor Pro</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.3</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(3)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Subscription Services, Themes & Plugins</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">1,020.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 1: Product 3 - Remini Premium -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="{{ asset('assets/images/digital/prod_remini_pro.png') }}" alt="Remini Premium" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Remini Premium</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.5</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(4)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Artificial intelligence (AI), Subscription Services</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">1,500.00৳ - 13,500.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 1: Product 4 - Spotify Premium -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="{{ asset('assets/images/digital/prod_spotify_premium.png') }}" alt="Spotify Premium" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Spotify Premium</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.0</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(3)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Entertainment & Streaming, Subscription</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">205.00৳ - 2,040.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 1: Product 5 - FreeFire MAX -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <span class="discount-badge discount-green">NEW</span>
+                                <img src="{{ asset('assets/images/digital/prod_freefire_max.png') }}" alt="FreeFire MAX" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">FreeFire MAX</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.0</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(3)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Game & Gift Card</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">380.00৳ - 1,880.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Product 6 - Amazon Prime -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="{{ asset('assets/images/digital/digital_prime.png') }}" alt="Amazon Prime Video" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Amazon Prime</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.6</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(7)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Digital, Entertainment & Streaming</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">150.00৳ - 1,560.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Product 7 - Microsoft 365 -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="{{ asset('assets/images/digital/digital_office365.png') }}" alt="Microsoft 365 Personal" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Microsoft 365</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.5</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(4)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Digital, Office & Productivity</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">310.00৳ - 2,600.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Product 8 - Windows Digital -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <span class="discount-badge">-94%</span>
+                                <img src="{{ asset('assets/images/digital/digital_windows.png') }}" alt="Windows Digital License" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Windows Digital</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.7</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(3)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Operating Systems, Perpetual License</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">780.00৳ - 890.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Product 9 - Canva Pro -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Canva Pro Subscription" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Canva Pro</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.9</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(18)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Digital, Design & Productivity</a>
+                                <div class="arrival-price-wrap">
+                                    <del class="arrival-old-price">1,200.00৳</del>
+                                    <span class="arrival-price">299.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Product 10 - ChatGPT Plus -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=80" alt="ChatGPT Plus GPT-4o" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">ChatGPT Plus (GPT-4o)</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.9</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(12)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Artificial intelligence (AI), Subscription Services</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">2,450.00৳ - 24,000.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Product 11 - Perplexity Pro AI -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=400&q=80" alt="Perplexity Pro AI" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Perplexity Pro AI</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.8</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(8)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Artificial intelligence (AI), Search & Research</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">1,850.00৳ - 18,500.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Product 12 - Midjourney Standard -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=400&q=80" alt="Midjourney AI Standard" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Midjourney AI</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.7</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(6)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Artificial intelligence (AI), Generative Art</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">3,500.00৳ - 35,000.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Product 13 - Apple ID (US Region) -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=400&q=80" alt="Apple ID US Region" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Apple ID (US)</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">5.0</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(9)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Game & Gift Card, Apple Services</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">1,530.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Product 14 - Crunchyroll Mega Fan -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=400&q=80" alt="Crunchyroll Mega Fan" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Crunchyroll Fan</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.6</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(4)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Entertainment & Streaming, Anime</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">450.00৳ - 4,200.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Product 15 - YouTube Premium -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=400&q=80" alt="YouTube Premium Subscription" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">YouTube Premium</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.9</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(15)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Entertainment & Streaming, Ad-Free</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">280.00৳ - 2,800.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Product 16 - PUBG Mobile UC -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <span class="discount-badge discount-green">NEW</span>
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&q=80" alt="PUBG Mobile UC Global" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">PUBG Mobile UC</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.8</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(11)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Game & Gift Card, In-Game Currency</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">420.00৳ - 8,500.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Product 17 - Surfshark VPN -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <span class="discount-badge">-65%</span>
+                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=400&q=80" alt="Surfshark VPN Premium" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Surfshark VPN</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.7</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(5)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Security & Privacy, Virtual Private Network</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">650.00৳ - 3,900.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Product 18 - Grammarly Premium -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=400&q=80" alt="Grammarly Premium" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Grammarly Premium</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.8</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(7)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Digital, Writing & Productivity</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">499.00৳ - 4,800.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Product 19 - Discord Nitro -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1614680376593-902f749f7ffc?auto=format&fit=crop&w=400&q=80" alt="Discord Nitro Boost" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Discord Nitro Boost</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.9</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(10)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Game & Gift Card, Chat & Streaming</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">1,150.00৳ - 11,000.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Product 20 - Adobe All Apps CC -->
+                        <div class="arrival-product-card">
+                            <a href="#product-details" class="arrival-thumb-box">
+                                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&q=80" alt="Adobe Creative Cloud All Apps" class="arrival-product-img" loading="lazy">
+                                <div class="card-support-badge">
+                                    <span class="badge-brand">d</span>
+                                    <span class="badge-text">24/7 Support</span>
+                                </div>
+                            </a>
+                            <div class="arrival-product-body">
+                                <div class="arrival-title-rating">
+                                    <h3 class="arrival-product-title"><a href="#product-details">Adobe All Apps CC</a></h3>
+                                    <div class="arrival-rating">
+                                        <span class="rating-num">4.9</span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="rating-count">(8)</span>
+                                    </div>
+                                </div>
+                                <a href="#category" class="arrival-category-sub">Design & Creativity, Subscription</a>
+                                <div class="arrival-price-wrap">
+                                    <span class="arrival-price">4,500.00৳ - 45,000.00৳</span>
+                                </div>
+                                <a href="#cart" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> <span>Add To Cart</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- =========================================================================
+                     Remini AI Image Editing Tool Promotional Banner (Matching Screenshot)
+                     ========================================================================= -->
+                <section class="remini-promo-section" aria-label="Remini AI Image Editing Tool">
+                    <div class="remini-banner-card">
+                        <!-- Left Content Info -->
+                        <div class="remini-content-col">
+                            <span class="remini-badge">AI Image Editing Tool</span>
+                            <h2 class="remini-title">
+                                এক ক্লিকেই আপনার ঝাপসা ছবিকে<br>করে তুলুন<br>
+                                <span class="remini-highlight">ক্রিস্টাল ক্লিয়ার!</span>
+                            </h2>
+                            <div class="remini-action">
+                                <a href="#remini-pro" class="btn-remini-get">Get Now</a>
+                            </div>
+                        </div>
+
+                        <!-- Center Remini App Icon Badge -->
+                        <div class="remini-app-badge">
+                            <div class="remini-icon-frame">
+                                <svg viewBox="0 0 100 100" fill="none" class="remini-svg-frame">
+                                    <rect x="22" y="24" width="56" height="46" rx="4" stroke="#fbcfe8" stroke-width="5.5" fill="none" transform="rotate(-6 50 47)"/>
+                                    <path d="M57 32L59.5 38.5L66 41L59.5 43.5L57 50L54.5 43.5L48 41L54.5 38.5Z" fill="#ffffff"/>
+                                </svg>
+                            </div>
+                            <span class="remini-brand-text">Remini</span>
+                        </div>
+
+                        <!-- Right Visual Crystal Clear Landscape Comparison -->
+                        <div class="remini-visual-col">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" alt="Crystal Clear Lake Landscape" class="remini-landscape-img" loading="lazy">
+                            <div class="remini-slider-handle" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
             </div>
         </main>
     </div>
@@ -995,16 +2214,107 @@
     <!-- =========================================================================
          Floating Contact Us Widget (Bottom Right)
          ========================================================================= -->
+
+    <!-- =========================================================================
+         Site Footer (Black Background - Matching Reference Structure)
+         ========================================================================= -->
+    <footer class="site-footer" aria-label="Site Footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand Info -->
+                <div class="footer-col brand-col">
+                    <a href="{{ url('/') }}" class="footer-brand-logo">
+                        <span class="logo-icon">d</span>
+                        <span class="logo-text">digigo<span class="text-domain">.com.bd</span></span>
+                    </a>
+                    <p class="footer-brand-desc">
+                        We specialize in providing exclusively authentic digital products, gadgets and strategic solutions to help turn your ambitious ideas into reality.
+                    </p>
+                </div>
+
+                <!-- Column 2: Popular Categories / Policies -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Popular Categories</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#privacy-policy">Privacy Policy</a></li>
+                        <li><a href="#refund-policy">Refund Policy</a></li>
+                        <li><a href="#delivery-policy">Delivery Policy</a></li>
+                        <li><a href="#support-faq">Support & FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Useful Links -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Useful Links</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
+                        <li><a href="#corporate-partnership">Corporate Partnership</a></li>
+                        <li><a href="#career">Career</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: App Downloads & Social Links -->
+                <div class="footer-col apps-social-col">
+                    <h3 class="footer-col-title">Available On:</h3>
+                    <div class="app-download-badges">
+                        <!-- Google Play -->
+                        <a href="#google-play" class="store-badge-btn" title="Get it on Google Play">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="store-svg-icon"><path d="M3.609 1.814L13.793 12 3.61 22.186c-.352-.365-.558-.87-.558-1.428V3.242c0-.558.206-1.063.557-1.428zM15.207 13.414l2.586 2.586-11.897 6.84 9.31-9.426zm0-2.828L5.897 1.16 17.793 8l-2.586 2.586zm1.414 1.414l3.772-2.176c.725-.418.725-1.1 0-1.518L16.621 12z"/></svg>
+                            <div class="store-badge-text">
+                                <span class="badge-sub">GET IT ON</span>
+                                <span class="badge-main">Google Play</span>
+                            </div>
+                        </a>
+                        <!-- App Store -->
+                        <a href="#app-store" class="store-badge-btn" title="Download on the App Store">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="store-svg-icon"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.92.04-2.02.62-2.67 1.37-.58.66-1.1 1.73-.96 2.76 1.02.08 2.08-.53 2.71-1.28"/></svg>
+                            <div class="store-badge-text">
+                                <span class="badge-sub">Download on the</span>
+                                <span class="badge-main">App Store</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <h3 class="footer-col-title social-title">Social links:</h3>
+                    <div class="footer-social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-circle fb" title="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-circle insta" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-icon-circle wa" title="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.587 1.761.889 2.796.889 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.776-5.769-5.776zm3.385 8.213c-.14.394-.712.729-1.009.776-.282.045-.635.074-1.802-.408-1.493-.618-2.457-2.138-2.531-2.237-.074-.099-.607-.808-.607-1.543s.385-1.096.522-1.246c.137-.15.299-.187.399-.187.1 0 .2.001.288.006.092.005.215-.035.337.257.126.301.431 1.05.469 1.127.038.077.063.167.013.267-.05.1-.075.162-.15.25-.075.088-.158.196-.226.264-.075.075-.153.157-.066.307.088.15.39 1.02.836 1.417.575.512 1.059.67 1.209.745.15.075.238.063.326-.038.088-.1.376-.438.476-.588.1-.15.2-.125.338-.075.138.05.876.413 1.026.488.15.075.25.112.288.175.038.063.038.363-.102.757z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright & Payment Badges -->
+            <div class="footer-bottom-bar">
+                <p class="footer-copyright">
+                    <strong>DigiGo</strong> Copyright 2018-2026 <strong>All Right Reserved.</strong>
+                </p>
+                <div class="footer-payment-badges">
+                    <span class="pay-badge bkash">bKash</span>
+                    <span class="pay-badge nagad">নগদ</span>
+                    <span class="pay-badge rocket">rocket</span>
+                    <span class="pay-badge upay">upay</span>
+                    <span class="pay-badge card">VISA / Master</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
     <aside class="floating-contact-widget" aria-label="Customer Contact Support">
-        <a href="https://wa.me/8801600793325" target="_blank" rel="noopener noreferrer" class="contact-pill-link">
-            <span class="contact-pill-text">Contact us</span>
-            <span class="contact-bubble-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    <line x1="8" y1="9" x2="16" y2="9"></line>
-                    <line x1="8" y1="13" x2="14" y2="13"></line>
-                </svg>
-            </span>
+        <a href="https://wa.me/8801600793325" target="_blank" rel="noopener noreferrer" class="contact-bubble-btn" aria-label="Chat with Support">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                <line x1="8" y1="9" x2="16" y2="9"></line>
+                <line x1="8" y1="13" x2="14" y2="13"></line>
+            </svg>
         </a>
     </aside>
 
