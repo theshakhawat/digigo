@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\MailConfigService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +12,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        if (file_exists(app_path('helpers.php'))) {
+            require_once app_path('helpers.php');
+        }
     }
 
     /**
@@ -19,6 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Dynamically apply database-driven SMTP / Mailer settings
+        $this->app->make(MailConfigService::class)->apply();
     }
 }

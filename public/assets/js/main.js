@@ -166,7 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let currentSlide = 0;
         let slideInterval = null;
-        const autoPlayDelay = 4000; // 4 seconds auto change
+        const autoPlayDelay = parseInt(carousel.getAttribute('data-delay') || '4000', 10);
+        const isAutoPlayEnabled = carousel.getAttribute('data-autoplay') !== 'false';
 
         const goToSlide = (index) => {
             if (index < 0) {
@@ -192,7 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const startAutoPlay = () => {
             stopAutoPlay();
-            slideInterval = setInterval(nextSlide, autoPlayDelay);
+            if (isAutoPlayEnabled && slides.length > 1) {
+                slideInterval = setInterval(nextSlide, autoPlayDelay);
+            }
         };
 
         const stopAutoPlay = () => {

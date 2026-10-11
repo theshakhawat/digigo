@@ -15,11 +15,46 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::updateOrCreate(
+            ['email' => 'admin@digigo.com.bd'],
+            [
+                'name' => 'Admin User',
+                'phone' => '01700000000',
+                'role' => 'admin',
+                'status' => 'active',
+                'password' => bcrypt('password123'),
+                'email_verified_at' => now(),
+            ]
+        );
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        User::updateOrCreate(
+            ['email' => 'user@digigo.com.bd'],
+            [
+                'name' => 'Regular Customer',
+                'phone' => '01800000000',
+                'role' => 'user',
+                'status' => 'active',
+                'password' => bcrypt('password123'),
+                'email_verified_at' => now(),
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'shakhawat9083@gmail.com'],
+            [
+                'name' => 'Shakhawat Hossain',
+                'phone' => '01646362559',
+                'role' => 'user',
+                'status' => 'active',
+                'password' => bcrypt('password123'),
+                'email_verified_at' => now(),
+            ]
+        );
+
+        $this->call([
+            CategorySeeder::class,
+            BrandSeeder::class,
+            BannerSeeder::class,
+            SettingSeeder::class,
         ]);
     }
 }

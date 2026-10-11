@@ -124,7 +124,7 @@ ul {
 .site-header {
     background: #ffffff;
     position: sticky;
-    top: calc(-1 * var(--header-height-top));
+    top: 0;
     z-index: 1000;
     width: 100%;
 }
@@ -1104,6 +1104,11 @@ ul {
 .trust-icon-box svg {
     width: 15px;
     height: 15px;
+}
+
+.trust-icon-box i {
+    font-size: 13px;
+    line-height: 1;
 }
 
 @keyframes trustMarqueeScroll {

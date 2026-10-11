@@ -1,694 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+@extends('layouts.site')
 
-    <!-- SEO Meta Tags -->
-    <title>DigiGo - Digital Products, Software & Subscription Services</title>
-    <meta name="description" content="DigiGo is your trusted digital store for AI tools, Gift Cards, Cloud Storage, Streaming Subscriptions, Operating Systems, and software solutions.">
-    <meta name="keywords" content="digital products, ai tools, subscriptions, gift cards, software keys, vps, cloud storage">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="{{ url()->current() }}">
+@section('title', 'DigiGo - Digital Products, Software & Subscriptions')
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="DigiGo - Digital Products & Software Store">
-    <meta property="og:description" content="Best deals on AI tools, Software Subscriptions, and Digital Services.">
-
-    <!-- Google Fonts (Hind Siliguri for Bengali + Plus Jakarta Sans for UI) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome 6.5.1 Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Owl Carousel 2 CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-</head>
-<body>
-
-    <!-- =========================================================================
-         Header Section (Desktop & Mobile)
-         ========================================================================= -->
-    <header class="site-header">
-        <!-- Top Header Bar -->
-        <!-- Top Header Bar -->
-        <div class="top-header">
-            <div class="container top-header-inner">
-
-                <!-- Left: Sidebar Toggle Button -->
-                <div class="header-left-group">
-                    <button type="button" class="sidebar-toggle-btn js-sidebar-toggle" aria-label="Toggle Navigation Menu">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Center: Brand Logo (Desktop & Mobile Centered) -->
-                <div class="header-logo-group">
-                    <a href="{{ url('/') }}" class="brand-logo" aria-label="DigiGo Homepage">
-                        <div class="logo-icon">d</div>
-                        <span class="brand-text">digigo<span class="text-primary">.com.bd</span></span>
-                    </a>
-                </div>
-
-                <!-- Desktop Search Bar -->
-                <div class="header-search-box desktop-search-box desktop-only">
-                    <form action="#" method="GET" class="search-form" role="search">
-                        <input type="text" name="q" class="search-input" placeholder="Search for products..." aria-label="Search products">
-                        <button type="submit" class="search-submit-btn" aria-label="Submit Search">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Right: Desktop Contact Numbers & Mobile Search Button -->
-                <div class="header-right-group">
-                    <div class="header-contact-info desktop-only">
-                        <div class="contact-item">
-                            <span class="contact-label">24 Support</span>
-                            <a href="tel:+8809611678088" class="contact-value">+8809611678088</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">WhatsApp</span>
-                            <a href="https://wa.me/8801600793325" target="_blank" rel="noopener noreferrer" class="contact-value">+8801600793325</a>
-                        </div>
-                    </div>
-
-                    <!-- Mobile Search Trigger Button (Circular Magenta/Purple Button matching Bongo Digital) -->
-                    <button type="button" class="mobile-search-trigger js-search-modal-open" aria-label="Open Search">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </button>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Sub Header Bar (Desktop Blue Ribbon) -->
-        <div class="sub-header-bar desktop-only">
-            <div class="container sub-header-inner">
-
-                <!-- Left: Menu Pill Toggle -->
-                <button type="button" class="menu-pill-btn js-sidebar-toggle" aria-label="Open Categories Menu">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                    <span>All Categories</span>
-                </button>
-
-                <!-- Center: Navigation Links -->
-                <nav class="main-nav-links" aria-label="Main Navigation">
-                    <a href="{{ url('/') }}" class="nav-link-item active">Home</a>
-                    <a href="#" class="nav-link-item">All Products</a>
-                    <a href="#" class="nav-link-item">Special Offers</a>
-                    <a href="#" class="nav-link-item">Support</a>
-                </nav>
-
-                <!-- Right: Action Icons (Cart, Wishlist, Account) -->
-                <div class="header-action-icons">
-                    <a href="#" class="action-icon-btn" aria-label="Shopping Cart">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="9" cy="21" r="1"></circle>
-                            <circle cx="20" cy="21" r="1"></circle>
-                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                        </svg>
-                        <span class="action-badge">1</span>
-                    </a>
-
-                    <a href="#" class="action-icon-btn" aria-label="Wishlist">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                        <span class="action-badge">0</span>
-                    </a>
-
-                    <a href="#" class="action-icon-btn" aria-label="User Account">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </header>
-
-    <!-- =========================================================================
-         Mobile Fullscreen Search Modal (Matching Mobile Screenshot 4)
-         ========================================================================= -->
-    <div class="mobile-search-modal" id="mobileSearchModal" aria-hidden="true">
-        <div class="mobile-search-header">
-            <a href="{{ url('/') }}" class="brand-logo">
-                <div class="logo-icon">d</div>
-                <span class="brand-text">digigo<span class="text-primary">.com.bd</span></span>
-            </a>
-
-            <button type="button" class="search-modal-close-btn js-search-modal-close" aria-label="Close Search">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-
-        <div class="mobile-search-body">
-            <!-- Search Input Box -->
-            <form action="#" method="GET" class="mobile-search-input-wrap">
-                <input type="text" name="q" id="mobileSearchInput" class="mobile-search-input" placeholder="Search for products" autocomplete="off">
-            </form>
-
-            <!-- Search History Section -->
-            <div class="search-section-block">
-                <div class="search-section-title">SEARCH HISTORY</div>
-                <div class="search-history-list">
-                    <div class="history-tag">
-                        <span class="tag-text">sa</span>
-                        <button type="button" class="tag-remove" aria-label="Remove search item">✕</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Popular Requests Section -->
-            <div class="search-section-block">
-                <div class="search-section-title">POPULAR REQUESTS</div>
-                <div class="popular-tags-grid">
-                    <button type="button" class="popular-tag-btn">CANVA</button>
-                    <button type="button" class="popular-tag-btn">VEO 3</button>
-                    <button type="button" class="popular-tag-btn">PERPLEXITY</button>
-                    <button type="button" class="popular-tag-btn">TRUECALLER</button>
-                    <button type="button" class="popular-tag-btn">APPLE GIFT CARD</button>
-                    <button type="button" class="popular-tag-btn">SURFSHARK VPN</button>
-                    <button type="button" class="popular-tag-btn">WINDOWS 11</button>
-                    <button type="button" class="popular-tag-btn">CRUNCHYROLL</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- =========================================================================
-         Mobile & Desktop Sidebar Drawer with Tabs (CATEGORIES & MENU)
-         (Matching Mobile Screenshots 2 & 3)
-         ========================================================================= -->
-    <!-- Overlay Backdrop -->
-    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
-
-    <!-- Category Sidebar Drawer -->
-    <aside class="category-sidebar" id="categorySidebar" aria-label="Sidebar Navigation">
-        <!-- Top Tabs Header (CATEGORIES / MENU) -->
-        <div class="sidebar-tabs-header">
-            <button type="button" class="sidebar-tab-btn active" data-tab="categories">CATEGORIES</button>
-            <button type="button" class="sidebar-tab-btn" data-tab="menu">MENU</button>
-        </div>
-
-        <!-- Tab 1: Categories Content -->
-        <div class="sidebar-tab-content active" id="tabCategories">
-            <ul class="sidebar-menu-list">
-                <!-- 1. Artificial intelligence (AI) -->
-                <li class="sidebar-menu-item">
-                    <a href="#ai" class="sidebar-menu-link active">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Artificial Intelligence (AI)</span>
-                    </a>
-                </li>
-
-                <!-- 2. Game & Gift Card -->
-                <li class="sidebar-menu-item">
-                    <a href="#games-gift-cards" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-                                <line x1="6" y1="12" x2="10" y2="12"></line>
-                                <line x1="8" y1="10" x2="8" y2="14"></line>
-                                <line x1="15" y1="13" x2="15.01" y2="13"></line>
-                                <line x1="18" y1="11" x2="18.01" y2="11"></line>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Game & Gift Card</span>
-                    </a>
-                </li>
-
-                <!-- 3. Cloud Storage -->
-                <li class="sidebar-menu-item">
-                    <a href="#cloud-storage" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Cloud Storage</span>
-                    </a>
-                </li>
-
-                <!-- 4. Entertainment & Streaming -->
-                <li class="sidebar-menu-item">
-                    <a href="#entertainment-streaming" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="4" width="20" height="15" rx="2"></rect>
-                                <polygon points="10 8 16 11.5 10 15 10 8"></polygon>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Entertainment & Streaming</span>
-                    </a>
-                </li>
-
-                <!-- 5. Mobile Apps -->
-                <li class="sidebar-menu-item">
-                    <a href="#mobile-apps" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Mobile Apps</span>
-                    </a>
-                </li>
-
-                <!-- 6. Office & Productivity -->
-                <li class="sidebar-menu-item">
-                    <a href="#office-productivity" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Office & Productivity</span>
-                    </a>
-                </li>
-
-                <!-- 7. Operating Systems -->
-                <li class="sidebar-menu-item">
-                    <a href="#operating-systems" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Operating Systems</span>
-                    </a>
-                </li>
-
-                <!-- 8. Privacy & Security -->
-                <li class="sidebar-menu-item">
-                    <a href="#privacy-security" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Privacy & Security</span>
-                    </a>
-                </li>
-
-                <!-- 9. Subscription Services -->
-                <li class="sidebar-menu-item">
-                    <a href="#subscription-services" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="16" y1="2" x2="16" y2="6"></line>
-                                <line x1="8" y1="2" x2="8" y2="6"></line>
-                                <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Subscription Services</span>
-                    </a>
-                </li>
-
-                <!-- 10. E-Learning -->
-                <li class="sidebar-menu-item">
-                    <a href="#e-learning" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">E-Learning</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Tab 2: Menu Content (Matching Mobile Screenshot 3) -->
-        <div class="sidebar-tab-content" id="tabMenu">
-            <ul class="sidebar-menu-list">
-                <li class="sidebar-menu-item">
-                    <a href="{{ url('/') }}" class="sidebar-menu-link">
-                        <span class="sidebar-item-text">Home</span>
-                    </a>
-                </li>
-                <li class="sidebar-menu-item">
-                    <a href="#promotions" class="sidebar-menu-link">
-                        <span class="sidebar-item-text">Promotions</span>
-                    </a>
-                </li>
-                <li class="sidebar-menu-item">
-                    <a href="#support-zone" class="sidebar-menu-link">
-                        <span class="sidebar-item-text">Support Zone</span>
-                    </a>
-                </li>
-                <li class="sidebar-menu-item">
-                    <a href="#about-us" class="sidebar-menu-link">
-                        <span class="sidebar-item-text">About Us</span>
-                    </a>
-                </li>
-                <li class="sidebar-menu-item">
-                    <a href="#contact-us" class="sidebar-menu-link">
-                        <span class="sidebar-item-text">Contact Us</span>
-                    </a>
-                </li>
-                <li class="sidebar-menu-item">
-                    <a href="#store-locations" class="sidebar-menu-link">
-                        <span class="sidebar-item-text">Store Locations</span>
-                    </a>
-                </li>
-                <li class="sidebar-menu-item">
-                    <a href="#wishlist" class="sidebar-menu-link">
-                        <span class="sidebar-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                            </svg>
-                        </span>
-                        <span class="sidebar-item-text">Wishlist</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </aside>
-
-    <!-- =========================================================================
-         Main Layout: Mini Icon Rail (Desktop) + Content Area (Mobile & Desktop)
-         ========================================================================= -->
-    <div class="layout-container">
+@section('content')
+<div class="layout-container">
 
 
         <!-- Main Content Area with Banner Slider & Mobile Features -->
         <main class="main-content">
             <div class="banner-wrapper">
 
-                <!-- Hero Banner Carousel (Mobile & Desktop - Matching Bongo Digital) -->
-                <section class="hero-carousel" id="heroCarousel" aria-label="Featured Promotions">
+                <!-- Hero Banner Carousel (Mobile & Desktop - Controlled via Admin Panel) -->
+                @php
+                    $carouselBanners = isset($banners) && $banners->isNotEmpty() ? $banners : \App\Models\Banner::active()->orderBy('order', 'asc')->get();
+                @endphp
+                <section class="hero-carousel"
+                         id="heroCarousel"
+                         aria-label="Featured Promotions"
+                         data-autoplay="{{ setting('banner_autoplay', '1') === '1' ? 'true' : 'false' }}"
+                         data-delay="{{ setting('banner_delay', '4000') }}">
                     <div class="carousel-track">
-
-                        <!-- Slide 1: Elevate your audio experience -->
-                        <div class="carousel-slide active">
-                            <div class="banner-card">
-                                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1600&q=80" alt="Audio Experience" class="banner-cover-img" loading="eager">
-                                <div class="banner-content">
-                                    <h1 class="banner-title">
-                                        Elevate your audio <span class="highlight-symbol">🎧</span><br>
-                                        experience
-                                    </h1>
-                                    <p class="banner-description">
-                                        Immerse yourself in crystal clear sound with our premium wireless headphones and high-fidelity earbuds at best prices.
-                                    </p>
-                                    <div class="banner-action">
-                                        <a href="#audio-sound" class="btn-shop-now">SHOP NOW</a>
+                        @forelse($carouselBanners as $index => $banner)
+                            <!-- Slide {{ $index + 1 }}: {{ $banner->title }} -->
+                            <div class="carousel-slide {{ $loop->first ? 'active' : '' }}">
+                                <div class="banner-card">
+                                    <img src="{{ $banner->image_url }}"
+                                         alt="{{ $banner->title }}"
+                                         class="banner-cover-img"
+                                         loading="{{ $loop->first ? 'eager' : 'lazy' }}">
+                                    <div class="banner-content">
+                                        <h2 class="banner-title">
+                                            {!! nl2br(e($banner->title)) !!}
+                                        </h2>
+                                        @if($banner->subtitle)
+                                            <p class="banner-description">
+                                                {{ $banner->subtitle }}
+                                            </p>
+                                        @endif
+                                        <div class="banner-action">
+                                            <a href="{{ $banner->button_link }}" class="btn-shop-now">
+                                                {{ $banner->button_text ?? 'SHOP NOW' }}
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Slide 2: Premium AI Tools & Software Keys -->
-                        <div class="carousel-slide">
-                            <div class="banner-card">
-                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80" alt="Premium AI Tools & Software Keys" class="banner-cover-img" loading="lazy">
-                                <div class="banner-content">
-                                    <h2 class="banner-title">
-                                        Premium AI Tools <span class="highlight-symbol">🚀</span><br>
-                                        & Software Keys
-                                    </h2>
-                                    <p class="banner-description">
-                                        Supercharge your workflow with genuine licenses for top AI tools, creative software, and productivity suites with instant delivery.
-                                    </p>
-                                    <div class="banner-action">
-                                        <a href="#ai-tools" class="btn-shop-now">EXPLORE DEALS</a>
+                        @empty
+                            <!-- Fallback Slide if no banners are configured -->
+                            <div class="carousel-slide active">
+                                <div class="banner-card">
+                                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1600&q=80" alt="Audio Experience" class="banner-cover-img" loading="eager">
+                                    <div class="banner-content">
+                                        <h1 class="banner-title">
+                                            Elevate your audio <span class="highlight-symbol">🎧</span><br>
+                                            experience
+                                        </h1>
+                                        <p class="banner-description">
+                                            Immerse yourself in crystal clear sound with our premium wireless headphones and high-fidelity earbuds at best prices.
+                                        </p>
+                                        <div class="banner-action">
+                                            <a href="#audio-sound" class="btn-shop-now">SHOP NOW</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Slide 3: Smart Watches & Accessories -->
-                        <div class="carousel-slide">
-                            <div class="banner-card">
-                                <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1600&q=80" alt="Smart Wearable Tech" class="banner-cover-img" loading="lazy">
-                                <div class="banner-content">
-                                    <h2 class="banner-title">
-                                        Smart Devices <span class="highlight-symbol">⌚</span><br>
-                                        & Wearable Tech
-                                    </h2>
-                                    <p class="banner-description">
-                                        Discover the latest smartwatches, fitness trackers, and modern smart accessories engineered for your everyday lifestyle.
-                                    </p>
-                                    <div class="banner-action">
-                                        <a href="#smartwatches" class="btn-shop-now">ORDER NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 4: Ultra Fast Charging & Power Solutions -->
-                        <div class="carousel-slide">
-                            <div class="banner-card">
-                                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1600&q=80" alt="Fast Charging Solutions" class="banner-cover-img" loading="lazy">
-                                <div class="banner-content">
-                                    <h2 class="banner-title">
-                                        Fast Charging <span class="highlight-symbol">⚡</span><br>
-                                        & Power Solutions
-                                    </h2>
-                                    <p class="banner-description">
-                                        Ultra-compact, lightning-fast 20W to 100W GaN chargers and power banks built to keep all your gadgets charged anywhere.
-                                    </p>
-                                    <div class="banner-action">
-                                        <a href="#power-charging" class="btn-shop-now">SHOP NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        @endforelse
                     </div>
 
                     <!-- Carousel Pagination Dots (Capsule Pill matching Bongo Digital) -->
-                    <div class="carousel-pagination banner-dots-pill" id="carouselDots" role="tablist" aria-label="Banner pagination">
-                        <button class="dot-btn active" role="tab" aria-label="Slide 1" aria-selected="true" data-slide="0"></button>
-                        <button class="dot-btn" role="tab" aria-label="Slide 2" aria-selected="false" data-slide="1"></button>
-                        <button class="dot-btn" role="tab" aria-label="Slide 3" aria-selected="false" data-slide="2"></button>
-                        <button class="dot-btn" role="tab" aria-label="Slide 4" aria-selected="false" data-slide="3"></button>
-                    </div>
+                    @if(setting('banner_dots', '1') === '1' && count($carouselBanners) > 1)
+                        <div class="carousel-pagination banner-dots-pill" id="carouselDots" role="tablist" aria-label="Banner pagination">
+                            @foreach($carouselBanners as $index => $banner)
+                                <button class="dot-btn {{ $loop->first ? 'active' : '' }}"
+                                        role="tab"
+                                        aria-label="Slide {{ $index + 1 }}"
+                                        aria-selected="{{ $loop->first ? 'true' : 'false' }}"
+                                        data-slide="{{ $index }}"></button>
+                            @endforeach
+                        </div>
+                    @endif
 
                     <!-- Desktop Nav Arrows -->
-                    <button type="button" class="carousel-nav-btn prev js-carousel-prev desktop-only" aria-label="Previous Slide">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </button>
-                    <button type="button" class="carousel-nav-btn next js-carousel-next desktop-only" aria-label="Next Slide">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                    </button>
+                    @if(setting('banner_arrows', '1') === '1' && count($carouselBanners) > 1)
+                        <button type="button" class="carousel-nav-btn prev js-carousel-prev desktop-only" aria-label="Previous Slide">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <button type="button" class="carousel-nav-btn next js-carousel-next desktop-only" aria-label="Next Slide">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    @endif
                 </section>
 
                 <!-- =========================================================================
                      Trust & Features Bar (Continuous Scrolling Marquee)
                      ========================================================================= -->
-                <section class="trust-features-bar" aria-label="Trust & Guarantees">
-                    <div class="trust-marquee-track">
-                        <!-- Set 1 -->
-                        <div class="trust-marquee-group">
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                        <polyline points="9 12 11 14 15 10"></polyline>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">Authentic & Genuine Product.</span>
-                            </div>
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">24/7 Support Always Be There for You</span>
-                            </div>
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">Low Prices Than in Other Stores</span>
-                            </div>
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                                        <line x1="1" y1="10" x2="23" y2="10"></line>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">Safe Payment With Multiple Method</span>
-                            </div>
-                        </div>
+                @php
+                    $trustFeaturesEnabled = setting('trust_features_enabled', '1') === '1';
+                    $trustFeaturesSpeed = (int) setting('trust_features_speed', 28);
+                    $trustFeaturesList = $trustFeaturesEnabled ? trust_features() : [];
+                @endphp
 
-                        <!-- Set 2 (Duplicate for smooth infinite seamless loop) -->
-                        <div class="trust-marquee-group" aria-hidden="true">
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                        <polyline points="9 12 11 14 15 10"></polyline>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">Authentic & Genuine Product.</span>
+                @if($trustFeaturesEnabled && count($trustFeaturesList) > 0)
+                    <section class="trust-features-bar" aria-label="Trust & Guarantees">
+                        <div class="trust-marquee-track" style="animation-duration: {{ $trustFeaturesSpeed > 0 ? $trustFeaturesSpeed : 28 }}s;">
+                            <!-- Set 1 -->
+                            <div class="trust-marquee-group">
+                                @foreach($trustFeaturesList as $feature)
+                                    <div class="trust-feature-item">
+                                        <span class="trust-icon-box" aria-hidden="true">
+                                            @if(str_starts_with(trim($feature['icon'] ?? ''), '<svg'))
+                                                {!! $feature['icon'] !!}
+                                            @else
+                                                <i class="{{ $feature['icon'] ?: 'fa-solid fa-circle-check' }}"></i>
+                                            @endif
+                                        </span>
+                                        @if(!empty($feature['link']))
+                                            <a href="{{ $feature['link'] }}" class="trust-text hover:text-brand-600 transition">{{ $feature['text'] }}</a>
+                                        @else
+                                            <span class="trust-text">{{ $feature['text'] }}</span>
+                                        @endif
+                                    </div>
+                                @endforeach
                             </div>
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">24/7 Support Always Be There for You</span>
-                            </div>
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">Low Prices Than in Other Stores</span>
-                            </div>
-                            <div class="trust-feature-item">
-                                <span class="trust-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                                        <line x1="1" y1="10" x2="23" y2="10"></line>
-                                    </svg>
-                                </span>
-                                <span class="trust-text">Safe Payment With Multiple Method</span>
+
+                            <!-- Set 2 (Duplicate for smooth infinite seamless loop) -->
+                            <div class="trust-marquee-group" aria-hidden="true">
+                                @foreach($trustFeaturesList as $feature)
+                                    <div class="trust-feature-item">
+                                        <span class="trust-icon-box">
+                                            @if(str_starts_with(trim($feature['icon'] ?? ''), '<svg'))
+                                                {!! $feature['icon'] !!}
+                                            @else
+                                                <i class="{{ $feature['icon'] ?: 'fa-solid fa-circle-check' }}"></i>
+                                            @endif
+                                        </span>
+                                        @if(!empty($feature['link']))
+                                            <a href="{{ $feature['link'] }}" tabindex="-1" class="trust-text hover:text-brand-600 transition">{{ $feature['text'] }}</a>
+                                        @else
+                                            <span class="trust-text">{{ $feature['text'] }}</span>
+                                        @endif
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                @endif
 
                 <!-- =========================================================================
                      Featured Categories Quick Access (Matching Screenshot)
                      ========================================================================= -->
-                <section class="category-circle-slider" aria-label="Featured Categories">
-                    <div class="circle-items-track">
-                        <!-- 1. Audio & Sound -->
-                        <a href="#audio-sound" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=200&h=200&q=80" alt="Audio & Sound" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Audio & Sound</span>
-                        </a>
+                @php
+                    $circleCategories = isset($featuredCategories) && $featuredCategories->isNotEmpty()
+                        ? $featuredCategories
+                        : \App\Models\Category::active()->where('is_featured', true)->take(10)->get();
+                @endphp
 
-                        <!-- 2. Smartwatches & Accessories -->
-                        <a href="#smartwatches" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=200&h=200&q=80" alt="Smartwatches & Accessories" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Smartwatches<br>& Accessories</span>
-                        </a>
-
-                        <!-- 3. Power & Charging Solutions -->
-                        <a href="#power-charging" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=200&h=200&q=80" alt="Power & Charging Solutions" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Power &<br>Charging<br>Solutions</span>
-                        </a>
-
-                        <!-- 4. Computer Peripherals -->
-                        <a href="#computer-peripherals" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=200&h=200&q=80" alt="Computer Peripherals" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Computer<br>Peripherals</span>
-                        </a>
-
-                        <!-- 5. Networking & Smart Security -->
-                        <a href="#networking-security" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=200&h=200&q=80" alt="Networking & Smart Security" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Networking &<br>Smart<br>Security</span>
-                        </a>
-
-                        <!-- 6. Lighting & Studio Gear -->
-                        <a href="#lighting-studio" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=200&h=200&q=80" alt="Lighting & Studio Gear" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Lighting &<br>Studio Gear</span>
-                        </a>
-
-                        <!-- 7. Home & Kitchen -->
-                        <a href="#home-kitchen" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=200&h=200&q=80" alt="Home & Kitchen" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Home &<br>Kitchen</span>
-                        </a>
-
-                        <!-- 8. Mobile Accessories & Lifestyle -->
-                        <a href="#mobile-accessories" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=200&h=200&q=80" alt="Mobile Accessories & Lifestyle" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Mobile<br>Accessories &<br>Lifestyle</span>
-                        </a>
-
-                        <!-- 9. Lifestyle -->
-                        <a href="#lifestyle" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&w=200&h=200&q=80" alt="Lifestyle" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Lifestyle</span>
-                        </a>
-
-                        <!-- 10. Digital Goods -->
-                        <a href="#digital-goods" class="circle-item">
-                            <div class="circle-avatar-wrap">
-                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=200&h=200&q=80" alt="Digital Goods" class="circle-category-img" loading="lazy">
-                            </div>
-                            <span class="circle-item-name">Digital Goods</span>
-                        </a>
-                    </div>
-                </section>
+                @if($circleCategories->isNotEmpty())
+                    <section class="category-circle-slider" aria-label="Featured Categories">
+                        <div class="circle-items-track">
+                            @foreach($circleCategories as $cat)
+                                <a href="{{ route('search', ['category' => $cat->slug]) }}" class="circle-item">
+                                    <div class="circle-avatar-wrap">
+                                        @if($cat->image_url)
+                                            <img src="{{ $cat->image_url }}" alt="{{ $cat->name }}" class="circle-category-img" loading="lazy">
+                                        @elseif($cat->image && str_starts_with($cat->image, 'http'))
+                                            <img src="{{ $cat->image }}" alt="{{ $cat->name }}" class="circle-category-img" loading="lazy">
+                                        @else
+                                            <div class="w-full h-full rounded-full bg-slate-100 flex items-center justify-center text-brand-600 font-bold text-sm">
+                                                <i class="fa-solid fa-shapes text-sm"></i>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <span class="circle-item-name">{!! nl2br(e($cat->name)) !!}</span>
+                                </a>
+                            @endforeach
+                        </div>
+                    </section>
+                @endif
 
                 <!-- =========================================================================
                      Recently Viewed Products Section (Owl Carousel)
@@ -2209,164 +1697,5 @@
 
             </div>
         </main>
-    </div>
-
-    <!-- =========================================================================
-         Floating Contact Us Widget (Bottom Right)
-         ========================================================================= -->
-
-    <!-- =========================================================================
-         Site Footer (Black Background - Matching Reference Structure)
-         ========================================================================= -->
-    <footer class="site-footer" aria-label="Site Footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- Column 1: Brand Info -->
-                <div class="footer-col brand-col">
-                    <a href="{{ url('/') }}" class="footer-brand-logo">
-                        <span class="logo-icon">d</span>
-                        <span class="logo-text">digigo<span class="text-domain">.com.bd</span></span>
-                    </a>
-                    <p class="footer-brand-desc">
-                        We specialize in providing exclusively authentic digital products, gadgets and strategic solutions to help turn your ambitious ideas into reality.
-                    </p>
-                </div>
-
-                <!-- Column 2: Popular Categories / Policies -->
-                <div class="footer-col">
-                    <h3 class="footer-col-title">Popular Categories</h3>
-                    <ul class="footer-links-list">
-                        <li><a href="#privacy-policy">Privacy Policy</a></li>
-                        <li><a href="#refund-policy">Refund Policy</a></li>
-                        <li><a href="#delivery-policy">Delivery Policy</a></li>
-                        <li><a href="#support-faq">Support & FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Useful Links -->
-                <div class="footer-col">
-                    <h3 class="footer-col-title">Useful Links</h3>
-                    <ul class="footer-links-list">
-                        <li><a href="#about-us">About Us</a></li>
-                        <li><a href="#contact-us">Contact Us</a></li>
-                        <li><a href="#corporate-partnership">Corporate Partnership</a></li>
-                        <li><a href="#career">Career</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4: App Downloads & Social Links -->
-                <div class="footer-col apps-social-col">
-                    <h3 class="footer-col-title">Available On:</h3>
-                    <div class="app-download-badges">
-                        <!-- Google Play -->
-                        <a href="#google-play" class="store-badge-btn" title="Get it on Google Play">
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="store-svg-icon"><path d="M3.609 1.814L13.793 12 3.61 22.186c-.352-.365-.558-.87-.558-1.428V3.242c0-.558.206-1.063.557-1.428zM15.207 13.414l2.586 2.586-11.897 6.84 9.31-9.426zm0-2.828L5.897 1.16 17.793 8l-2.586 2.586zm1.414 1.414l3.772-2.176c.725-.418.725-1.1 0-1.518L16.621 12z"/></svg>
-                            <div class="store-badge-text">
-                                <span class="badge-sub">GET IT ON</span>
-                                <span class="badge-main">Google Play</span>
-                            </div>
-                        </a>
-                        <!-- App Store -->
-                        <a href="#app-store" class="store-badge-btn" title="Download on the App Store">
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="store-svg-icon"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.92.04-2.02.62-2.67 1.37-.58.66-1.1 1.73-.96 2.76 1.02.08 2.08-.53 2.71-1.28"/></svg>
-                            <div class="store-badge-text">
-                                <span class="badge-sub">Download on the</span>
-                                <span class="badge-main">App Store</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <h3 class="footer-col-title social-title">Social links:</h3>
-                    <div class="footer-social-links">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-circle fb" title="Facebook">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-circle insta" title="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-icon-circle wa" title="WhatsApp">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.587 1.761.889 2.796.889 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.776-5.769-5.776zm3.385 8.213c-.14.394-.712.729-1.009.776-.282.045-.635.074-1.802-.408-1.493-.618-2.457-2.138-2.531-2.237-.074-.099-.607-.808-.607-1.543s.385-1.096.522-1.246c.137-.15.299-.187.399-.187.1 0 .2.001.288.006.092.005.215-.035.337.257.126.301.431 1.05.469 1.127.038.077.063.167.013.267-.05.1-.075.162-.15.25-.075.088-.158.196-.226.264-.075.075-.153.157-.066.307.088.15.39 1.02.836 1.417.575.512 1.059.67 1.209.745.15.075.238.063.326-.038.088-.1.376-.438.476-.588.1-.15.2-.125.338-.075.138.05.876.413 1.026.488.15.075.25.112.288.175.038.063.038.363-.102.757z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Copyright & Payment Badges -->
-            <div class="footer-bottom-bar">
-                <p class="footer-copyright">
-                    <strong>DigiGo</strong> Copyright 2018-2026 <strong>All Right Reserved.</strong>
-                </p>
-                <div class="footer-payment-badges">
-                    <span class="pay-badge bkash">bKash</span>
-                    <span class="pay-badge nagad">নগদ</span>
-                    <span class="pay-badge rocket">rocket</span>
-                    <span class="pay-badge upay">upay</span>
-                    <span class="pay-badge card">VISA / Master</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-    <aside class="floating-contact-widget" aria-label="Customer Contact Support">
-        <a href="https://wa.me/8801600793325" target="_blank" rel="noopener noreferrer" class="contact-bubble-btn" aria-label="Chat with Support">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                <line x1="8" y1="9" x2="16" y2="9"></line>
-                <line x1="8" y1="13" x2="14" y2="13"></line>
-            </svg>
-        </a>
-    </aside>
-
-    <!-- =========================================================================
-         Mobile Fixed Bottom Navigation Bar (Matching Mobile Screenshot 1)
-         ========================================================================= -->
-    <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
-        <button type="button" class="mobile-nav-item js-sidebar-toggle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-            <span>Menu</span>
-        </button>
-
-        <a href="#wishlist" class="mobile-nav-item">
-            <div class="nav-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-                <span class="nav-badge">0</span>
-            </div>
-            <span>Wishlist</span>
-        </a>
-
-        <a href="#cart" class="mobile-nav-item">
-            <div class="nav-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="9" cy="21" r="1"></circle>
-                    <circle cx="20" cy="21" r="1"></circle>
-                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg>
-                <span class="nav-badge">1</span>
-            </div>
-            <span>Cart</span>
-        </a>
-
-        <a href="#account" class="mobile-nav-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <span>My account</span>
-        </a>
-    </nav>
-
-    <!-- jQuery & Owl Carousel 2 JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- Custom Vanilla JavaScript -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-</body>
-</html>
+</div>
+@endsection
